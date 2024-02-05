@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+</head>
+
+<body style="background-color:#10171f; flex-wrap: wrap;">
+
+
+  <div style="background-color: #10171f; display: flex; flex-direction:row;">
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      class="w-6 h-6" style="width: 70px; margin-left: 10px;color: gray; margin-left: 20px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      class="w-6 h-6" style="width: 70px; margin-left: 5px; color: gray; margin-left: 50px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+    </svg>
+
+    <h1 style="margin-left: 370px; color: rgb(219, 217, 232);">DMO</h1>
+
+  </div>
+
+
+
+  <div style="width: 300px; height: 400px; margin-left: 80px;">
+
+
+    <img src="img/photo9512122642.jpg">
+
+
+
+  </div>
+  <hr>
+  <div style="color: darkgrey;">
+
+    <div style="display: flex; margin-left: 320px ; ">
+
+
+
+      <div>
+        <form action="/submit" method="post">
+
+              <label for="option1">زبان</label>
+
+          <pre>                                    </pre>
+
+              <input type="checkbox" id="option1" name="options[]" value="option1">
+
+          <br>
+      </div>
+
+
+      <div>
+        <form action="/submit" method="post">
+
+              <label for="option1">کتاب</label>
+
+          <pre>                                    </pre>
+
+              <input type="checkbox" id="option1" name="options[]" value="option1">
+
+          <br>
+      </div>
+
+
+      <div>
+        <form action="/submit" method="post">
+
+              <label for="option1">ورزش</label>
+
+          <pre>                                    </pre>
+
+              <input type="checkbox" id="option1" name="options[]" value="option1">
+
+          <br>
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+             <div style="color: brown; margin-left: 500px; margin-top: 70px;">
+
+              <div>فقط <span id="time">06:00</span> تا پایان روز فرصت است</div>
+
+             </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+
+
+    function startTimer(duration, display) {
+      var timer = duration, minutes, seconds;
+      setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          timer = duration;
+        }
+      }, 1000);
+    }
+
+    window.onload = function () {
+      var fiveMinutes = 60 * 24,
+        display = document.querySelector('#time');
+      startTimer(fiveMinutes, display);
+    };
+
+
+  </script>
+
+
+
+</body>
+
+</html>
